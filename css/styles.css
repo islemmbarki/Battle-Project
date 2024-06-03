@@ -1,0 +1,927 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+html{
+  background-image: url("../images/utils/loadingScreen.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 25%;
+}
+
+.startingMenu > p {
+  margin: 100px auto;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+#canvas {
+  background-repeat: no-repeat;
+}
+ 
+/* #startGame{
+  color:yellow;
+  background-color: rgb(7, 7, 110);
+  padding:15px 140px;
+  font-size:30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #000000;
+  border:2px solid rgba(243, 219, 1, 0.979);
+  cursor: pointer;
+}
+
+#startGame:hover {
+  background-color: rgb(7, 7, 155);
+} */
+
+.turretSelector{
+  /* position:relative; */
+  display: flex;
+  flex-direction: row;
+
+  height:215px;
+  width: 1200px;
+  align-items: self-end;
+
+  /* border:1px solid red; */
+}
+
+.turretsMenuToPick{
+  /* margin-bottom: 95px; */
+  margin-left: 84px;
+
+}
+
+.turretsMenuToPick img{
+  width: 54px !important;
+  margin: 0 5px;
+}
+
+.costGold {
+  /* border:1px solid red; */
+  width:100px;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 52px;
+    margin-left: 24px;
+}
+
+.costGold img{
+  width: 60px!important;
+  /* border:1px solid red; */
+  align-self: center;
+}
+
+.costTurrets{
+  color:rgba(250, 250, 26, 0.822);
+  font-weight: bolder;
+  font-size: 25px;
+  /* border:1px solid red; */
+  font-family: Play;
+}
+
+.hpContainer img {
+  width: 30px;
+  height: 30px;
+}
+
+.goldContainer img {
+  width: 30px;
+  height: 30px;
+}
+
+.turretToSelect{
+   cursor:pointer;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.hpContainer{
+  /* border:1px solid red; */
+  width: 10px;
+}
+
+.goldContainer{
+  /* border:1px solid red; */
+  width: 10px;
+}
+
+.margin-leftDiv{
+  margin-left:80px;
+}
+
+.imageGif{
+  margin-bottom: -4px;
+  margin-left: 231px;
+}
+
+.imageGif img{
+  width: 179px !important;
+  border-radius: 15px;
+
+}
+
+.turretSelectedBorder {
+  border: 3px solid rgba(250, 250, 26, 0.822);
+}
+
+.buttonSelectedBorder{
+    border: 3px solid rgba(250, 250, 26, 0.822);
+}
+
+.startingMenu {
+  background-size: 100vw;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.startingMenu > p {
+  margin: 100px auto;
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.lowerMenuTowers{
+  text-align: center;
+  /* width: 1200px;
+  height: 700px; */
+  /* border:1px solid red; */
+  position: absolute;
+  /* z-index: 1; */
+  /* justify-content: center; */
+  /* border: 1px solid red; */
+  margin: 0 auto !important;
+  background-image: url("../images/menuUI/lowerMenuv2.png") !important;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  margin-top: -219px !important;
+}
+
+#idGoldTurretCost{
+  margin-left:-8px;
+}
+
+#goldPlayer{
+  margin-left:-2px;
+}
+
+#hpPlayer{
+  margin-left: -5px;
+}
+
+#cheatCodes{
+  /* border: 1px solid black; */ 
+  position: absolute;
+  margin-top: -603px;
+  /* width: 100vw; */
+  text-align: center;
+  font-family: Play;
+  z-index: 100;
+}
+
+#cheatCodes span{
+  background-color: white;
+   height: 100%;
+    /* border:3px solid black; */
+    font-family: Play;
+    
+}
+
+#cheatCodes input{
+  width: 362px;
+  height:30px;
+  border:hidden;
+  color:lawngreen;
+  background-color: rgb(0, 0, 0);
+  
+}
+
+#cheatCodes input:focus{
+   outline: none;
+}
+
+.inputContainer{
+  color:lawngreen;
+  border: 1px solid lawngreen;
+}
+.preventDrag{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* #gameMenu{
+  background-image: url("../images/lowerMenu.png");
+} */
+
+#gameMenu img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.noDrag{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+#endGameMenu{
+  text-align: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: center;
+}
+
+#restartButtonEndGameMenu{
+  color:yellow;
+  background-color: rgb(7, 7, 110);
+  padding: 3px 64px;
+  font-size:30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #000000;
+  border:2px solid rgba(243, 219, 1, 0.979);
+  cursor: pointer;
+  margin-bottom: 15px;
+  max-width: 500px;
+  min-width: 310px;
+}
+
+#restartButtonEndGameMenu:hover {
+  background-color: rgb(7, 7, 155);
+}
+
+#restartingTimerText{
+color:red;
+font-size: 50px;
+font-weight: bold;
+font-family: Play;
+}
+
+.logoSoundSound{
+  width: 22px !important;
+  height: 22px !important;
+  position: absolute;
+  margin-top: -45px;
+  margin-left:14px;
+  cursor:pointer;
+}
+.logoSoundNoSound{
+  width: 22px !important;
+  height: 22px !important;
+  position: absolute;
+  margin-top:-15px;
+  margin-left:13px;
+  cursor:pointer;
+}
+.hidden {
+  display: none !important;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* Trolls fangs and goblins / AKA v.2.0 */
+.titleSubtitle{
+ flex-direction: column;
+ text-align: center;
+ margin-bottom:30px;
+}
+
+.selectionLevel{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  flex-wrap: wrap;
+
+}
+
+.levelSelection{
+  width:20vw;
+  margin-bottom:10px;
+  margin-right:10px;
+  flex:2;
+}
+
+/* .levelSelection:hover{
+  border:2px solid rgba(243, 219, 1, 0.979);
+} */
+
+.modalBtn{
+  color:yellow;
+  background-color: rgb(7, 7, 110);
+  padding:15px 140px;
+  font-size:30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #000000;
+  border:2px solid rgba(243, 219, 1, 0.979);
+  cursor: pointer;
+  width: 50px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBtn:hover {
+  background-color: rgb(7, 7, 155);
+}
+
+.canvasContainerAll{
+  display:flex;
+  flex-direction: column-reverse;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  color:white;
+  background-color: rgba(170, 170, 170, 0.74);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: 19.8vw;
+  height:95%;
+  left: 50%;
+  margin-left: -10.2vw;
+  font-family: 'Permanent Marker', cursive;
+  border:3px solid blue;
+  cursor: pointer;
+  font-size: 2.5vw;
+}
+
+.tooltiptext{
+  font-weight: bold;
+  font-size: 5vh;
+  line-height: 400%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible !important;
+}
+
+.colorRedText{
+  color:red !important;
+}
+
+.colorYellowText{
+  color: #FFCF00 !important;
+}
+
+.colorGreenText{
+  color:rgb(18, 243, 18) !important;
+}
+
+.canvasDiv{
+  margin: 0 auto;
+}
+
+.goldTurretCost{
+  margin-left: 85px;
+  margin-bottom: 1px !important;
+}
+
+.uiMenuText{
+  color:yellow;
+  font-size:20px;
+  font-family: 'Permanent Marker',normal;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.soundOffOn{
+  position:absolute;
+  top:50px;
+  left: 14px;
+}
+
+.noPointerEvents{
+  pointer-events: none;
+}
+
+#overCanvasPauseMenu{
+  border:2px solid red;
+  width: 1200px;
+  height:700px;
+  position: absolute;
+  top: 0;
+  background-color: #0d0d0db3;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+}
+
+.pauseFont{
+  font-family: 'Permanent Marker',normal;
+  color:red;
+  width:100%;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  margin-top: 48px;
+}
+
+ 
+.pauseBtn{
+  color:yellow;
+  background-color: rgb(7, 7, 110);
+  padding:15px 140px;
+  font-size:30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #000000;
+  border:2px solid rgba(243, 219, 1, 0.979);
+  cursor: pointer;
+  width: 500px;
+  margin-bottom: 12px;
+}
+
+.pauseBtn:hover {
+  background-color: rgb(7, 7, 155);
+}
+
+.smallerImg{
+  width:110px;
+}
+
+#exitButtonEndGameMenu{
+  color:yellow;
+  background-color: rgb(7, 7, 110);
+  padding: 3px 64px;
+  font-size:30px;
+  border-radius: 10px;
+  box-shadow: 5px 10px #000000;
+  border:2px solid rgba(243, 219, 1, 0.979);
+  cursor: pointer;
+  max-width: 500px;
+  min-width: 310px;
+}
+
+#exitButtonEndGameMenu:hover {
+  background-color: rgb(7, 7, 155);
+}
+
+.smallerImgExitBtn{
+  width: 68px;
+}
+
+#topUIMenu{
+  position: absolute;
+    display:flex;
+    flex-direction:row;
+    font-size: 25px;
+    color: red;
+    z-index: 1;
+    width: 1200px;
+    background-image: url("../images/menuUI/topUI_reverse_v2_2.png");
+    height: 82px;
+    background-repeat: no-repeat;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+#uiTopMenuFirst{
+  width:400px;
+}
+
+#wavesRemaining{
+  font-family: 'Permanent Marker',normal;
+  margin-left: 145px;
+  margin-top: 4px;
+}
+
+#enemiesRemaining{
+  font-family: 'Permanent Marker',normal;
+  margin-left: 145px;
+  margin-top: -10px;
+}
+
+#uiTopMenuSecond{
+  width:400px;
+  text-align:center;
+}
+
+#uiTopMenuThird{
+  width:400px;
+}
+
+#uiTopMenuThird > p{
+  font-family: 'Permanent Marker',normal;
+  font-size:20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+#cheatCodesText{
+  font-family: 'Permanent Marker',normal;
+  font-size:20px;
+  margin-top: 5px;
+}
+
+#instructionsGameUI{
+  border: 1px solid red; font-size:200px; width:99vw; height:99vh;
+  position:absolute;
+  top:0;
+  margin-left:10px;
+  margin-top:5px;
+  background-color: #0d0d0db3;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* visibility: hidden; */
+  color:white;
+  overflow:hidden;
+}
+
+#customGameUI{
+  border: 1px solid red; font-size:200px; width:99vw; height:99vh;
+  position:absolute;
+  top:0;
+  margin-left:10px;
+  margin-top:5px;
+  background-color: #0d0d0db3;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* visibility: hidden; */
+  color:white;
+}
+
+.doubleBtnDiv{
+  display:flex;
+}
+
+.marginAuto{
+  margin:0 auto;
+}
+
+.buttonsStartingMenu{
+  display: flex;
+  flex-direction: column;
+  margin-top:25px;
+}
+
+.btnUIstartingMenu{
+  margin-top:20px;
+}
+
+.margin-leftDivBtn{
+  margin-left:20px;
+}
+
+.smallerImgBtn{
+  width: 175px;
+}
+
+#rankedGameUI{
+  border: 1px solid red; 
+  font-size:200px; 
+  width:99vw; 
+  height:99vh;
+  position:absolute;
+  top:0;
+  margin-left:10px;
+  margin-top:5px;
+  background-color: #0d0d0db3;
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:white;
+}
+
+.closeIcoX{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.xButtonClose{
+  width: 60px;
+  cursor:pointer;
+}
+
+.xButtonClose:hover{
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.xButtonClose:hover ~ .attentionHover{
+  display: block !important;
+}
+
+/* Instructions UI */
+.instructionsP{
+  font-size: 40px;
+    padding: 10px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgb(255 102 102);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: tb-rl;
+    text-orientation: upright;
+}
+
+.instructionsP2{
+  font-size: 40px;
+  padding: 10px;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(255 102 102);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  writing-mode: vertical-lr;
+  text-orientation: upright
+}
+
+.instructionsCG{
+  font-size:35px;
+  padding:10px;
+  font-family: Play;
+  color:rgb(248, 248, 248);
+}
+
+.small20pxText{
+  font-size:20px;
+}
+
+.attentionHover{
+  position: absolute;
+  margin-right: 70px;
+  line-height: 55px;
+  background-color: #8f8e8e40;
+  padding: 0 20px 0 20px;
+}
+
+#coffinDancers{
+  width:300px;
+}
+
+#divCoffinDancers{
+  position:absolute;
+  width:300px;
+  top: 46%;
+  left:72%;
+  right:0;
+}
+
+/* Trying responsive design */
+.gameTitle{
+  min-width: 70%;
+  max-width: 90%;
+}
+
+.logoGameTitle{
+  min-width: 40%;
+  max-width: 40%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .selectionLevel {
+   flex-direction: column;
+  }
+
+  .levelSelection{
+    max-width: 50vw;
+    min-width: 40vw;
+  }
+
+  .tooltip .tooltiptext{
+    max-width: 50vw;
+    min-width: 40vw;
+    margin-left:-20.8vw;
+    font-size:5vw;
+  }
+
+  .startingMenu{
+    height: fit-content !important;
+  }
+
+  .doubleBtnDiv{
+    flex-direction: column;
+  }
+
+  .margin-leftDivBtn{
+    margin-left:0px;
+    margin-top:20px;
+  }
+  .titleSubtitle{
+    margin-top:6vh;
+  }
+  .subtitle{
+    margin-left: 500px;
+  }
+}
+.closeButtonInstructionsUI{
+  margin-top:20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* Acordion instructions Menu */
+.accordion {
+  /* background-color: #eee; */
+  color:rgb(7, 7, 155);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: 'Permanent Marker', cursive;
+  z-index: 3;
+}
+
+.hover-text-accordion{
+  color:rgb(141, 17, 17);
+  float:right;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.acordion-panel{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-content-h2{
+  font-size:25px;
+  color:rgb(7, 7, 155);
+  font-family: 'Permanent Marker', cursive;
+  margin-bottom: 10px
+}
+
+.slide-content-ul{
+  font-size:16px;
+  color:rgb(7, 7, 155);
+  padding: 15px;
+}
+
+.slide-content-ul-cheat{
+  font-size:16px;
+  color:rgb(0 126 34);
+  padding: 15px;
+}
+
+.slide-content-ul-cheat-span{
+  color: #df4e4e;
+  font-size: 14px;
+}
+
+.slide-content-quote{
+  font-style: italic;
+  color:rgb(116 113 113);
+  font-size:13px;
+  margin-bottom:10px;
+}
+
+.panel p{
+  color:black;
+  font-size:16px;
+  background-color:white;
+}
+
+.slide-button{
+  margin-top:20px;
+}
+/* ------------------------------------------------------------------- */
+/* Gallery slideshow for towers */
+.container{
+  font-size: 10px;
+  display: flex;
+  min-height: 315px;
+  flex-direction: row;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.slide:before {
+  content: "";
+  height: 0%;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.slide-content {
+  width: 60%;
+  float: right;
+  padding: 3% 8% 0em 8%;
+  position: relative;
+}
+.slide-img {
+  width: 40%;
+  float: left;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: aliceblue;
+  align-items: center;
+}
+.slide-img :before {
+  content: "";
+  height: 0%;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+.slide-img img{
+  max-width: 10rem;
+  max-height: 10rem;
+}
+.button-left {
+  float: left;
+ color: rgb(116 113 113);
+  font-size:20px;
+  cursor:pointer;
+}
+.button-right {
+  float: right;
+  text-align: right;
+  color: rgb(116 113 113);
+  font-size:20px;
+  cursor:pointer;
+}   
+.button-right:not(.inactive):hover, .button-left:not(.inactive):hover{
+  color:black;
+}
+.inactive {
+  color: #ccc;
+}
